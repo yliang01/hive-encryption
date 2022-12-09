@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+    <servers>
+        <server>
+            <id>cc3c-hive-all</id>
+            <username>${env.CODING_MAVEN_REG_USERNAME}</username>
+            <password>${env.CODING_MAVEN_REG_PASSWORD}</password>
+        </server>
+    </servers>
+</settings>
