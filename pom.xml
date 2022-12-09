@@ -22,4 +22,11 @@
         </dependency>
     </dependencies>
 
+    <distributionManagement>
+        <repository>
+            <id>cc3c-hive-all</id>
+            <name>all</name>
+            <url>https://cc3c-maven.pkg.coding.net/repository/hive/all/</url>
+        </repository>
+    </distributionManagement>
 </project>
