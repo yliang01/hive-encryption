@@ -17,37 +17,12 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 
 @Getter
-public class AESEncryption {
+public class HiveAesEncryption {
 
     private Cipher encryptCipher;
     private Cipher decryptCipher;
 
-    public static void main(String[] args) {
-        try {
-
-            AESEncryption aesEncryption = new AESEncryption("", "", "");
-            String encrypted = aesEncryption.encrypt("");
-            System.out.println(encrypted.toUpperCase());
-            System.out.println(encrypted.length());
-            char[] chars = encrypted.toUpperCase().toCharArray();
-            StringBuilder stringBuilder = new StringBuilder();
-            for (int i = 1; i <= chars.length; i++) {
-                stringBuilder.append(chars[i - 1]);
-                if (i % 16 == 0) {
-                    stringBuilder.append(System.lineSeparator());
-                }
-            }
-            System.out.println(stringBuilder);
-            String result = aesEncryption.decrypt("");
-            System.out.println(result);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-
-
-    public AESEncryption(String pwd, String iv, String salt) throws Exception {
+    public HiveAesEncryption(String pwd, String iv, String salt) throws Exception {
         SecretKeySpec secretKey = new SecretKeySpec(createKey(pwd, salt), "AES");
 
         encryptCipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
