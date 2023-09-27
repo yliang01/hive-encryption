@@ -1,4 +1,4 @@
-package cc.cc3c.hive.encryption;
+package cc.cc3c.hive.oss.encryption;
 
 import lombok.Getter;
 import org.apache.commons.codec.binary.Hex;
