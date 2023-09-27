@@ -36,7 +36,7 @@ public class HiveAesEncryption {
         try (CipherInputStream cipherInputStream = new CipherInputStream(new ByteArrayInputStream(data.getBytes(StandardCharsets.UTF_8)), encryptCipher)) {
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
             IOUtils.copy(cipherInputStream, byteArrayOutputStream);
-            return Hex.encodeHexString(byteArrayOutputStream.toByteArray());
+            return Hex.encodeHexString(byteArrayOutputStream.toByteArray()).toUpperCase();
         }
     }
 
