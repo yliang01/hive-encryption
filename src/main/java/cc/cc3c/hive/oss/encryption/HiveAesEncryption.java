@@ -19,8 +19,8 @@ import java.security.MessageDigest;
 @Getter
 public class HiveAesEncryption {
 
-    private Cipher encryptCipher;
-    private Cipher decryptCipher;
+    private final Cipher encryptCipher;
+    private final Cipher decryptCipher;
 
     public HiveAesEncryption(String pwd, String iv, String salt) throws Exception {
         SecretKeySpec secretKey = new SecretKeySpec(createKey(pwd, salt), "AES");

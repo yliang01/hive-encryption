@@ -1,7 +1,7 @@
 package cc.cc3c.hive.oss.encryption;
 
 import lombok.extern.slf4j.Slf4j;
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 @Slf4j
 public class HiveAesEncryptionTest {
