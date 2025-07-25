@@ -2,6 +2,7 @@ package cc.cc3c.hive.oss.encryption;
 
 import cc.cc3c.hive.encryption.HiveEncryption;
 import cc.cc3c.hive.encryption.HiveEncryptionConfig;
+import cc.cc3c.hive.encryption.HiveEncryptionConfiguration;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -10,7 +11,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 @Slf4j
-@SpringBootTest
+@SpringBootTest(classes = HiveEncryptionConfiguration.class)
 public class HiveEncryptionTest extends AbstractTestNGSpringContextTests {
 
     @Autowired
