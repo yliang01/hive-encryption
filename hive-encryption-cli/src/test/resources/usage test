@@ -1,0 +1,20 @@
+password 123
+
+good:
+encrypt -x data
+encrypt -x data -o C:\Users\YLiang\Downloads\encrypted
+encrypt -i C:\Users\YLiang\Downloads\data -o C:\Users\YLiang\Downloads\encrypted
+
+decrypt -x CC90B19A275CEEA89A94E62E838AC6C8
+decrypt -x CC90B19A275CEEA89A94E62E838AC6C8 -o C:\Users\YLiang\Downloads\data
+decrypt -i C:\Users\YLiang\Downloads\encrypted -o C:\Users\YLiang\Downloads\data
+
+bad:
+encrypt -o
+encrypt -o C:\Users\YLiang\Downloads\encrypted
+encrypt -i C:\Users\YLiang\Downloads\data
+encrypt -x data -i C:\Users\YLiang\Downloads\data -o C:\Users\YLiang\Downloads\encrypted
+
+decrypt -x aaa
+
+

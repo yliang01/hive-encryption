@@ -6,10 +6,10 @@ import lombok.Getter;
 public class HiveEncryptionConfig {
     private final String keyAlgorithm = "AES";
     private final String cipherAlgorithm = "AES/CBC/PKCS5Padding";
-    private final String salt;
-    private final String password;
+    private final byte[] salt;
+    private final byte[] password;
 
-    public HiveEncryptionConfig(String salt, String password) {
+    public HiveEncryptionConfig(byte[] salt, byte[] password) {
         this.salt = salt;
         this.password = password;
     }
