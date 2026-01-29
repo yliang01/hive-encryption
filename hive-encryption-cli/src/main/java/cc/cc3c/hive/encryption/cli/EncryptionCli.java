@@ -173,7 +173,7 @@ public class EncryptionCli {
         System.out.println("  --input-file,  -i  <file>       Input file path");
         System.out.println("  --input,       -x  <string>     Plain string (encrypt) or hex string (decrypt)");
         System.out.println("  --output-file, -o  <file>       Output file (required if input is file and mode is encrypt)");
-        System.out.println("  --iv,          -v  <string>     Initialization vector (optional, default: password)");
-        System.out.println("  --salt,        -s  <string>     Salt for key derivation (optional, default: password)");
+        System.out.println("  --iv,          -v  <string>     Initialization vector (optional, default value equals to password entered)");
+        System.out.println("  --salt,        -s  <string>     Salt for key derivation (optional, default value equals to password entered)");
     }
 }
