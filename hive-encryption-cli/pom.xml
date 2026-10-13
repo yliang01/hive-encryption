@@ -19,7 +19,7 @@
         <dependency>
             <groupId>yliang</groupId>
             <artifactId>hive-encryption-starter</artifactId>
-            <version>${version}</version>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 
